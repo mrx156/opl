@@ -1,0 +1,43 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/mrx156/f/main/55"))()
+getgenv().KillAura = nil
+getgenv().ChestFarm = nil
+local X = Material.Load({
+	Title = "Project XXL | Lazzy Exploits",
+	Style = 2,
+	SizeX = 250,
+	SizeY = 150,
+	Theme = "Light",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(235,235,235)
+	}
+})
+
+local Y = X.New({
+	Title = "Roblox Main Scripts"
+})
+
+
+
+local B = Y.Toggle({
+	Text = "Roblox | Kill Aura",
+	Callback = function(Value)
+		getgenv().KillAura = Value
+	end,
+	Enabled = false
+})
+
+
+
+
+while wait(5) do
+    if getgenv().KillAura == true then
+
+local args = {
+    [1] = "Claim",
+    [2] = "Challenge13"
+}
+
+workspace.UserData.User_1221175599.ChallengesRemote:FireServer(unpack(args))
+
+  end
+  end
